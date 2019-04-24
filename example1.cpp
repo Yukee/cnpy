@@ -41,6 +41,11 @@ int main()
     cnpy::npz_save("out.npz","myVar2",&myVar2,{1},"a"); //"a" appends to the file we created above
     cnpy::npz_save("out.npz","arr1",&data[0],{Nz,Ny,Nx},"a"); //"a" appends to the file we created above
 
+    // read keys only
+    auto keys = cnpy::npz_load_keys("out.npz");
+    for(auto &key: keys)
+        std::cout << key << std::endl;
+
     //load a single var from the npz file
     cnpy::NpyArray arr2 = cnpy::npz_load("out.npz","arr1");
 

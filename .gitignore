@@ -1,0 +1,9 @@
+*.txt
+*.so
+*.a
+CMakeFiles/
+*.npz
+*.npy
+*.cmake
+Makefile
+example1
